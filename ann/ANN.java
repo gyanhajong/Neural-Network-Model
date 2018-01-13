@@ -18,7 +18,7 @@ public class ANN {
        inputs[0] = {0, 0};
        inputs[1] = {0, 1};
        inputs[1] = {1, 1};
-
+        //New Comment
        for(int[] inputs: inputs) {
 
        		learning(inputs, getTarget(inputs));
