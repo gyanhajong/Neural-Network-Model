@@ -36,7 +36,7 @@ public class Neuron {
 
     //Weight Update
     void weightUpdate(float error, float eta) {
-
+        theta = theta - error*eta;
         for(int i = 0; i < weights.length; ++i) {
             weights[i] = weights[i] + (error*eta*input[i]);
         }
