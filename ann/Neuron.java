@@ -21,22 +21,22 @@ public class Neuron {
         {
             sum = sum + weights[i]*input[i];
         }
-       return sum-theta;
+       return sum+theta;
     }
     
     //Activation Function
     float activation(float val) {
-        return val;
+        return (float) (1/(1+Math.pow(2.71828, -val)))>0.5?1:0;
     }
     
     float getOutput(float[] inp) {
         input = inp.clone();
-        return activation(summation(input));
+        return activation(summation());
     }
 
     //Weight Update
     void weightUpdate(float error, float eta) {
-        theta = theta - error*eta;
+        theta = theta + error*eta;
         for(int i = 0; i < weights.length; ++i) {
             weights[i] = weights[i] + (error*eta*input[i]);
         }
