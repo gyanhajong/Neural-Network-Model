@@ -1,4 +1,3 @@
-package ann;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -23,8 +22,6 @@ public class ANN {
         inputs[2][0] = 1; inputs[2][1] = 1;
         inputs[3][0] = 0; inputs[3][1] = 0;
         for(float[] input: inputs) {
-             System.out.println("_____________INPUT______________");
-             System.out.println(input[0]+"\t"+input[1]);
              N.learning(input,getlabel(input));
         }
         

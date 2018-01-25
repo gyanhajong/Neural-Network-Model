@@ -1,4 +1,3 @@
-package ann;
 
 public class Neuron {
     
