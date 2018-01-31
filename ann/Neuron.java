@@ -25,7 +25,7 @@ public class Neuron {
     
     //Activation Function
     float activation(float val) {
-        return (float) (1/(1+Math.pow(2.71828, -val)))>0.5?1:0;
+        return (float) (1/(1+Math.pow(2.71828, -val)))>0.8?1:0;
     }
     
     float getOutput(float[] inp) {
